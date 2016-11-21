@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'bc-shop',
     template: `
-    <h1>This is {{pageTitle}}</h1>
+    <h1>Banner {{pageTitle}}</h1>
     <div>
         <nav class='navbar navbar-default'>
             <div class='container-fluid'>
@@ -23,5 +23,5 @@ import { Component } from '@angular/core';
      `
 })
 export class AppComponent {
-    pageTitle: string = `Acme Product Management`;
+    pageTitle: string = `BCShop`;
 }
