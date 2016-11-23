@@ -4,6 +4,8 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent }  from './app.component';
+import { AppMenuComponent }  from './appmenu.component';
+
 import { WelcomeComponent } from './home/welcome.component';
 import { AboutComponent } from './home/about.component';
 import { ProductModule } from './products/product.module';
@@ -21,6 +23,7 @@ import { ProductModule } from './products/product.module';
     ProductModule
   ],
   declarations: [
+    AppMenuComponent,
     AppComponent,
     WelcomeComponent,
     AboutComponent

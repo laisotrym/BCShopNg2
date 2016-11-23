@@ -3,7 +3,10 @@ import { RouterModule} from '@angular/router';
 
 import { ProductListComponent } from './product-list.component';
 import { ProductDetailComponent } from './product-detail.component';
+
 import { ProductFilterPipe } from './product-filter.pipe';
+import { CatIdToNamePipe } from './catIdToName.pipe';
+
 import { ProductDetailGuard } from './product-guard.service';
 import { ProductService } from './product.service';
 
@@ -13,7 +16,8 @@ import { SharedModule } from '../shared/shared.module';
     declarations: [
         ProductListComponent,
         ProductDetailComponent,
-        ProductFilterPipe
+        ProductFilterPipe,
+        CatIdToNamePipe
     ],
     imports: [
         SharedModule,
