@@ -20,6 +20,6 @@ export class StarComponent implements OnChanges {
     }
 
     onClick(): void {
-        this.hehe.emit(`The rating ${this.nrLove} was clicked!`);
+        this.hehe.emit(`The rating ${ this.nrLove+this.hoho } was clicked!`);
     }
 }
