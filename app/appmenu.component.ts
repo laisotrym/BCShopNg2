@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     template: `
             <div class='container-fluid'>
                 <!-- interpolation binding -->
-                <a class='navbar-brand'>{{pageTitle}}</a>
+                <a class='navbar-brand'>{{logo}}</a>
                 <ul class='nav navbar-nav'>
                     <li><a [routerLink]="['/welcome']">Home</a></li>
                     <li><a [routerLink]="['/products']">Product List</a></li>
@@ -17,4 +17,5 @@ import { Component } from '@angular/core';
 
 
 export class AppMenuComponent {
+    logo: string;
 }
