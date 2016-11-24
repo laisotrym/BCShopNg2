@@ -17,5 +17,5 @@ import { Component } from '@angular/core';
 
 
 export class AppMenuComponent {
-    logo: string;
+    logo: string = "BCS ^^";
 }

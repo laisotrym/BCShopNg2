@@ -10,7 +10,10 @@ import { ProductService } from './product.service';
 })
 export class ProductDetailComponent implements OnInit {
     pageTitle: string = 'Product Detail';
-    p1: IProduct = null;
+
+    //should meaningful name
+    //TODO: only for demo that we can use any name
+    p1: IProduct;
 
     //DI, service, short
     constructor(private _route: ActivatedRoute,
@@ -25,7 +28,7 @@ export class ProductDetailComponent implements OnInit {
         //logic here
         this._pService.getProductById(id)
             .subscribe(
-                result => {
+                (result) => {
                     this.p1 = result;
                     console.log(this.p1);
                 }

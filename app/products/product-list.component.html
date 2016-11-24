@@ -45,7 +45,7 @@
                                 <!-- img src=""  title="{{}}" -->
                                 <img *ngIf='showImage' [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
                             </td>
-                            <td><a [routerLink]="['detail', product.productId]">
+                            <td><a [routerLink]="['./detail', product.productId]">
                             {{product.productName}}
                         </a></td>
                             <td>{{ product.productCode | lowercase }}</td>

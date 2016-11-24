@@ -16,7 +16,7 @@ export class ProductDetailGuard implements CanActivate {
 
             //location.href = "", no
             //router -> SPA
-            this._router.navigate(['/products']);
+            //this._router.navigate(['/products']);
             return false;
         };
         return true;
