@@ -1,3 +1,4 @@
+//java, ...
 import { Component, OnInit } from '@angular/core';
 
 //model
@@ -6,6 +7,7 @@ import { IProduct } from './product';
 //service
 import { ProductService } from './product.service';
 
+//decorator
 @Component({
     templateUrl: 'app/products/product-list.component.html',
     styleUrls: ['app/products/product-list.component.css']
@@ -20,7 +22,9 @@ export class ProductListComponent implements OnInit {
     imageMargin: number = 2;
     showImage: boolean = false;
     listFilter: string;
-    errorMessage: string;
+    catId: number = 0 ;
+
+    public errorMessage: string;
 
     products: IProduct[];
 

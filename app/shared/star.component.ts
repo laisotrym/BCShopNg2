@@ -7,16 +7,19 @@ import  { Component, OnChanges, Input,
     styleUrls: ['app/shared/star.component.css']
 })
 export class StarComponent implements OnChanges {
-    @Input() rating: number;
+    @Input() hoho: number;
+
     starWidth: number;
-    @Output() ratingClicked: EventEmitter<string> =
+    nrLove: number = 100;
+
+    @Output() hehe: EventEmitter<string> =
         new EventEmitter<string>();
 
     ngOnChanges(): void {
-        this.starWidth = this.rating * 86 / 5;
+        this.starWidth = this.hoho * 86 / 5;
     }
 
     onClick(): void {
-        this.ratingClicked.emit(`The rating ${this.rating} was clicked!`);
+        this.hehe.emit(`The rating ${this.nrLove} was clicked!`);
     }
 }

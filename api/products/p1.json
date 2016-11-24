@@ -1,0 +1,16 @@
+    {
+        "result": {
+            "data": {
+                "productId": 1,
+                "productName": "Video Game Controller",
+                "productCode": "GMG-0042",
+                "releaseDate": "October 15, 2015",
+                "description": "Standard two-button video game controller",
+                "price": 35.95,
+                "starRating": 4.6,
+                "catId": 2,
+                "imageUrl": "http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
+            },
+            "code": "200"
+        }
+    }

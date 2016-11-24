@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router';
 
+import { ProductComponent } from './product.component';
 import { ProductListComponent } from './product-list.component';
 import { ProductDetailComponent } from './product-detail.component';
 
@@ -14,6 +15,7 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     declarations: [
+        ProductComponent,
         ProductListComponent,
         ProductDetailComponent,
         ProductFilterPipe,
@@ -22,10 +24,14 @@ import { SharedModule } from '../shared/shared.module';
     imports: [
         SharedModule,
         RouterModule.forChild([
-            { path: 'products', component: ProductListComponent },
-            { path: 'product/:id',
-              canActivate: [ ProductDetailGuard ],
-              component: ProductDetailComponent },
+            { path: 'products', component: ProductComponent,
+            children: [
+                { path: '', component: ProductListComponent },
+                { path: 'detail/:id', //dynamic parameter
+                  canActivate: [ ProductDetailGuard ], //filter
+                  component: ProductDetailComponent },
+            ]
+            }
         ])
     ],
     providers: [

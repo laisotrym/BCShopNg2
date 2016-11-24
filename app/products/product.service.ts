@@ -11,6 +11,7 @@ import { IProduct } from './product';
 @Injectable()
 export class ProductService {
     private _productUrl = 'api/products/products.json';
+    private _productDetailUrl = 'api/products/p1.json';
 
     constructor(private _http: Http) {}
 
@@ -32,7 +33,19 @@ export class ProductService {
 
     //get 1
     getProductById(id: number): Observable<IProduct> {
-        return null;
+        //let url = this._productDetailUrl.replace("id", +id);
+
+        let result = this._http.get(this._productDetailUrl)
+                .map(
+                    (response: Response) => {
+                        return <IProduct> response.json().result.data;
+                    } 
+                )
+                .do(d => console.log('Detail: ' +  JSON.stringify(d)))
+                .catch(this.handleError);;
+
+
+        return result;
     }
 
     private handleError(error: Response) {

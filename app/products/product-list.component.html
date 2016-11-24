@@ -45,7 +45,7 @@
                                 <!-- img src=""  title="{{}}" -->
                                 <img *ngIf='showImage' [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
                             </td>
-                            <td><a [routerLink]="['/product', product.productId]">
+                            <td><a [routerLink]="['detail', product.productId]">
                             {{product.productName}}
                         </a></td>
                             <td>{{ product.productCode | lowercase }}</td>
@@ -53,7 +53,8 @@
                             <td>{{ product.price | currency:'USD':true:'1.2-2'}}</td>
                             <td>{{ product.catId | catIdToName}}</td>
                             <td>
-                                <ai-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'>
+                                <!-- button name="hehe" onclick="testBtn()" -->
+                                <ai-star [hoho]='product.starRating' (hehe)='onRatingClicked($event)'>
                                 </ai-star>
                             </td>
                         </tr>
